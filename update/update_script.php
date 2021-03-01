@@ -114,12 +114,7 @@ if(isset($_POST['submit'])) {
         $formError['picture'] = ' Picture not uploaded';
     }
     $id=$_POST['id'];
-   /* var_dump("Post");
-    var_dump($_POST);
-    var_dump("Files");
-    var_dump($_FILES);
-    var_dump("error");
-    var_dump($formError);*/
+
 
     if ( count($formError) === 0){
         $db=connexion();

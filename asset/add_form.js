@@ -21,45 +21,33 @@ let envoyer=document.getElementById("submit");
 let ok=true; // boolean true seulement si les saisies sont correctes
 
 function checkTitle() {
-    console.log(0);
     if (variables['title'][0].test(document.getElementById('title').value)) {
-        console.log('01');
         Envoi[0] = true
     } else {
-        console.log('02');
         Envoi[0] = false;
         spanTitle.textContent = variables['title'][1];
     }
 }
 function checkArtist() {
-    console.log(1);
     if (document.getElementById('artist').value === "") {
-        console.log('11');
         Envoi[1] = false;
         spanArtist.textContent = variables['artist'][0];
     } else {
-        console.log('12');
         Envoi[1] = true;
     }
 }
 function checkYear() {
-    console.log('2');
     if (variables['year'][0].test(document.getElementById('year').value)) {
-        console.log('21');
         Envoi[2] = true
     } else {
-        console.log('22');
         Envoi[2] = false;
         spanYear.textContent = variables['year'][1];
     }
 }
 function checkGenre() {
-    console.log(3);
         if (variables['genre'][0].test(document.getElementById('genre').value)) {
-            console.log('31');
             Envoi[3] = true
         } else {
-            console.log('32');
             Envoi[3] = false;
             spanGenre.textContent = variables['genre'][1];
         }
@@ -67,44 +55,33 @@ function checkGenre() {
 
 
 function checkLabel() {
-    console.log(4);
     if (variables['label'][0].test(document.getElementById('label').value)) {
-        console.log('41');
         Envoi[4] = true
     } else {
-        console.log('42');
         Envoi[4] = false;
         spanLabel.textContent = variables['label'][1];
     }
 }
 function checkPrice() {
-    console.log(5);
     if (variables['price'][0].test(document.getElementById('price').value)) {
-        console.log('51');
         Envoi[5] = true
     } else {
-        console.log('52');
         Envoi[5] = false;
         spanPrice.textContent = variables['price'][1];
     }
 }
 
 function checkPicture() {
-    console.log(6);
     if (document.getElementById('picture').value === "") {
-        console.log('61');
         Envoi[6] = false;
         spanPicture.textContent = variables['picture'][0];
     } else {
-        console.log('62');
         Envoi[6] = true;
     }
 }
 
 
 envoyer.addEventListener("click",function (event){
-        console.log('envoi');
-
         checkTitle();
         checkArtist();
         checkYear();
@@ -120,7 +97,6 @@ envoyer.addEventListener("click",function (event){
             ok= true ;
         }
     }
-    console.log(Envoi);
         if (ok==false) {
             event.preventDefault();
         } else {

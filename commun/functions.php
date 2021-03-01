@@ -35,7 +35,3 @@ function modifier(){
     $db->query("UPDATE disc SET disc_title=$disc_title , disc_year=$year ,disc_label= $label , disc_genre= $genre ,disc_price= $price ,artist_id=$artist where disc_id=$id");
 }
 
-function ajouter(){
-
-
-}
